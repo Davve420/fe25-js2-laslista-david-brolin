@@ -1,0 +1,11 @@
+#inputform{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#inputwrapper{
+    display: inline-flex;
+    
+    
+}
