@@ -6,6 +6,7 @@
     <link href="/src/css/style.css" rel="stylesheet">
     <script src="src/modules/firebase.js" type="module"></script>
     <script src="/src/main.js" type="module"></script>
+    <script src="src/modules/sort&filter.js" type="module"></script>
     <title>Davi's Reading List</title>
 </head>
 <body>
@@ -15,6 +16,20 @@
         <input type="text" name="author" id="author" placeholder="Author">
         <button id="add">Add Book</button>
     </form>
+    </div>
+    <div id="sort&filter">
+        <label for="favorites">Only favorites</label>
+        <input type="checkbox" name="favorites" id="favorites" value="exampleValue">
+        
+        <label for="select">Sort your books</label>
+        <select name="select">
+            <option value="title: a-ö">Title: a-ö</option>
+            <option value="title: ö-a">Title: ö-a</option>
+            <option value="author: a-ö">Author: a-ö</option>
+            <option value="author: ö-a">Author: ö-a</option>
+            <option value="first-last">Added: First-last</option>
+            <option value="last-first">Added: Last-first</option>
+        </select>
     </div>
     <div id="books"></div>
 </body>
