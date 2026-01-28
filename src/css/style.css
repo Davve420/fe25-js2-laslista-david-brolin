@@ -1,11 +1,39 @@
 #inputform{
     display: flex;
     flex-direction: column;
-    
+    width: 50%;
 }
 
 #inputwrapper{
-    display: inline-flex;
-    
-    
+    display: flex;
+    justify-content: center;
+    margin: 1%;
 }
+
+#sort-filter{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+
+.book{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 1%;
+    padding: 1%;
+}
+
+.favoritebtn{
+    background: none;
+    border: none;
+
+}
+
+.favoritebtn:hover {
+    transform: translateY(-2px);
+}
+
+.favoritebtn:active{
+    transform: translateY(2px);
+}
+

@@ -1,5 +1,5 @@
-import { booksRef, db } from "./firebaseconfig";
-import { ref, onValue, update, push, remove } from "firebase/database";
+import { db } from "./firebaseconfig";
+import { ref, update, remove } from "firebase/database";
 
 export class Book {
     title
@@ -11,8 +11,6 @@ export class Book {
         this.author = author;
         this.favorite = favorite;
         this.id = id;
-
-        console.log('id', this.id)
     }
 
     getRef() {
@@ -23,21 +21,22 @@ export class Book {
     renderBook(wrapper) {
         const container = document.createElement('div');
         container.style.border = 'solid black 2px'
+        container.classList.add('book')
         const title = document.createElement('h2');
         const author = document.createElement('h3');
-        const favorite = document.createElement('button');
+        const favoriteBtn = document.createElement('button');
+        favoriteBtn.classList.add('favoritebtn')
         const delBtn = document.createElement('button');
         delBtn.innerText = 'delete book';
         title.innerText = this.title;
         author.innerText = this.author;
-        // console.log(this.favorite)
         if (this.favorite === false) {
-            favorite.innerHTML = '☆';
+            favoriteBtn.innerHTML = '☆';
 
         } else {
-            favorite.innerHTML = '⭐';
+            favoriteBtn.innerHTML = '⭐';
         }
-        favorite.addEventListener('click', ()=>{
+        favoriteBtn.addEventListener('click', ()=>{
             this.favorbook();
         })
 
@@ -46,7 +45,7 @@ export class Book {
         })
         // favorite.addEventListener('click', this.favorbook.bind(this))
         
-        container.append(favorite, title, author, delBtn);
+        container.append(favoriteBtn, title, author, delBtn);
         wrapper.append(container)
     }
 
