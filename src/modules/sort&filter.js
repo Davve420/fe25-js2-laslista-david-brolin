@@ -9,10 +9,10 @@ Sortering och filtrering ska fungera tillsammans. Väljs en ny filtrering ska sa
 */ 
 //funkade inte att skriva '? favorite: true' i onValue referensen
 //kolla på claras github FP1 för exempel kod på hur du ska tänka gällande checkboxens filtrering.
-let books = [{},{},{}]
-export function filterByFavorite(){
 
-}
+
+
+
 
 
 

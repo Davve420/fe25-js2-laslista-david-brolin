@@ -21,6 +21,8 @@
     flex-direction: column;
     margin: 1%;
     padding: 1%;
+    max-width: 200px;
+    max-height: 300px;
 }
 
 .favoritebtn{
@@ -30,7 +32,7 @@
 }
 
 .favoritebtn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .favoritebtn:active{

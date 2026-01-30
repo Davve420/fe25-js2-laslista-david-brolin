@@ -1,9 +1,11 @@
-import { postInput } from "./modules/firebase.js";
-import { filterByFavorite } from "./modules/sort&filter.js";
+import { postInput, filterByFavorite, books } from "./modules/firebase.js";
+
 
 const checkbox = document.querySelector('#favorites');
 checkbox.addEventListener('change',()=>{
-    filterByFavorite();
+    console.log(books)
+    console.log('checkbox checked')
+    const filtered =  filterByFavorite(books);
 })
 
 const myForm = document.querySelector('#inputform');
