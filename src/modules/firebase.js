@@ -40,8 +40,6 @@ export function postInput(myForm){
     }
 }
 
-export function filterByFavorite(booksArray){
-    return booksArray.filter(book => book.favorite === true);
-}
+
 
 
