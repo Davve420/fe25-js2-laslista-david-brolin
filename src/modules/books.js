@@ -55,7 +55,7 @@ export class Book {
         
         bookThreeD.append(img);
         
-        // Knappar för favoriter och delete
+        // Knappar för favorite och delete
         const favoriteBtn = document.createElement('button');
         favoriteBtn.classList.add('favoritebtn');
         favoriteBtn.innerHTML = this.favorite ? '⭐' : '☆';
