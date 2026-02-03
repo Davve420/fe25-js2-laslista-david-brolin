@@ -25,6 +25,11 @@
     max-height: 300px;
 }
 
+#books{
+    display: flex;
+    flex-direction: column;
+}
+
 .favoritebtn{
     background: none;
     border: none;
@@ -39,3 +44,180 @@
     transform: translateY(2px);
 }
 
+.bookPerspective {
+    perspective: 500px;
+}
+
+.bookThreeD {
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.bookThreeD:before {
+    background-image: linear-gradient(90deg,
+            #fff 40%,
+            #f6f6f6 0,
+            #f6f6f6 50%,
+            #fff 0,
+            #fff 90%,
+            #f6f6f6 0,
+            #f6f6f6);
+    background-size: 3px 3px;
+    transform: translateY(0) translateX(0) translateZ(0) rotateY(-90deg);
+    transform-origin: right;
+    width: var(--book-height, 30px);
+}
+
+.bookThreeD:after {
+    background-image: linear-gradient(0deg,
+            #f6f6f6 40%,
+            #eaeaed 0,
+            #eaeaed 50%,
+            #f6f6f6 0,
+            #f6f6f6 90%,
+            #eaeaed 0,
+            #eaeaed);
+    background-size: 4px 4px;
+    transform: translateY(0) translateX(0) translateZ(0) rotateX(-90deg);
+    transform-origin: top;
+    height: var(--book-height, 30px);
+}
+
+.bookPerspectiveContainer:hover .bookThreeD {
+    transform: rotateX(80deg) rotate(45deg) scale(0.75);
+}
+
+.bookPerspectiveContainer:hover .bookMetaText {
+    opacity: 100;
+    transform: translateY(0);
+}
+
+.bookPerspectiveContainerStyles {
+    display: block;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+    border: 1px solid #eaeaed;
+    padding: 48px;
+    transition: background-color 0.5s;
+    width: 25%;
+}
+
+.bookPerspectiveContainerStyles:hover {
+    background-color: #eaeaed;
+}
+
+.bookPerspectiveStyles {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+}
+
+.bookThreeDStyles {
+    margin: 0;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    flex: auto 0;
+    width: 100%;
+    max-width: 120px;
+}
+
+.bookThreeDStyles:after {
+    display: block;
+    content: '';
+    background-color: #f6f6f6;
+    width: calc(100% + 0.5px);
+    position: absolute;
+    left: 0;
+    border-radius: 8px 0 0 8px;
+    border-color: #333;
+    border-bottom: 3px solid;
+    border-top: 3px solid;
+    border-left: 4px solid;
+    border-right: 0;
+}
+
+.bookThreeDStyles:before {
+    display: block;
+    content: '';
+    background-color: #fff;
+    height: calc(100% + 0.5px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-color: #333;
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-top: 3px solid #eaeaed;
+    border-bottom: 0;
+}
+
+.bookMetaTextStyles {
+    text-align: left;
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    right: -24px;
+    opacity: 0;
+    transform: translateY(-16px);
+    transition: all 0.5s ease-in-out;
+    margin: 0;
+}
+
+.bookMetaTextStylesTitle {
+    font-size: 18px !important;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0 !important;
+}
+
+.bookMetaTextStylesAuthor {
+    font-size: 16px;
+    color: #666 !important;
+    margin: 4px 0 0 !important;
+}
+
+.bookPerspectiveContainer:hover .bookImage {
+    border-radius: 6px 0 0 6px;
+}
+
+.bookImage {
+    border-radius: 3px 0 0 3px;
+    transition: border-radius 0.3s ease-in-out;
+}
+
+.bookExternalLink {
+    position: absolute;
+    font-weight: bold;
+    color: rgb(32, 80, 255) !important;
+    font-size: 14px;
+    bottom: -24px;
+    left: -24px;
+    right: -24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all 0.5s ease-in-out;
+    margin: 0;
+    display: block;
+}
+
+.bookExternalLinkSpan {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 4px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: underline dotted rgb(32, 80, 255);
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+.bookExternalLinkArrow {
+    height: 8px;
+    width: 8px;
+    margin-left: 6px;
+    fill: rgb(32, 80, 255);
+}
