@@ -38,7 +38,7 @@ export const sortByAuthorAsc = (booksArray) => {
     return cloneArr.sort((a, b) => a.author.localeCompare(b.author));
 };
 
-// Last-first: reversera ordningen
+
 export const sortByLastFirst = (booksArray) => {
     const cloneArr = [...booksArray];
     return cloneArr.reverse();

@@ -123,6 +123,8 @@ body{
     cursor: pointer;
 }
 
+
+/*reference to the 3d book - "https://anthonyteo.com/blog/2024-01-11-make-your-reading-list-fun"*/
 .bookPerspective {
     perspective: 500px;
 }

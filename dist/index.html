@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi's Reading List</title>
+  <script type="module" crossorigin src="/assets/index-DOz_NvWo.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cjn8sZLW.css">
+</head>
+<body>
+    <div id="inputwrapper">
+    <form id="inputform">
+        <input type="text" name="title" id="title" placeholder="book title">
+        <input type="text" name="author" id="author" placeholder="Author">
+        <input type="text" name="imageUrl" id="imageUrl" placeholder="Image URL (optional)">
+        <button id="add">Add Book</button>
+    </form>
+    </div>
+    <div id="sort-filter">
+        <label for="favorites">Only favorites</label>
+        <input type="checkbox" name="favorites" id="favorites" value="exampleValue">
+        
+        <label for="select">Sort your books</label>
+        <select name="select">
+            <option value="title-asc">Title: a-ö</option>
+            <option value="title-desc">Title: ö-a</option>
+            <option value="author-asc">Author: a-ö</option>
+            <option value="author-desc">Author: ö-a</option>
+            <option value="first-last">Added: First-last</option>
+            <option value="last-first">Added: Last-first</option>
+        </select>
+    </div>
+    <div id="books"> </div>
+</body>
+</html>
