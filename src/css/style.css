@@ -278,35 +278,5 @@ body{
     transition: border-radius 0.3s ease-in-out;
 }
 
-.bookExternalLink {
-    position: absolute;
-    font-weight: bold;
-    color: rgb(32, 80, 255) !important;
-    font-size: 14px;
-    bottom: -24px;
-    left: -24px;
-    right: -24px;
-    opacity: 0;
-    transform: translateY(16px);
-    transition: all 0.5s ease-in-out;
-    margin: 0;
-    display: block;
-}
 
-.bookExternalLinkSpan {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 4px;
-    cursor: pointer;
-    position: relative;
-    text-decoration: underline dotted rgb(32, 80, 255);
-    text-underline-offset: 6px;
-    text-decoration-thickness: 2px;
-}
 
-.bookExternalLinkArrow {
-    height: 8px;
-    width: 8px;
-    margin-left: 6px;
-    fill: rgb(32, 80, 255);
-}
